@@ -1,0 +1,13 @@
+
+version: 2
+
+models:
+  - name: amazon_data
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - dbt_expectations.expect_column_values_to_be_unique:
+              row_condition: "Category is not null"

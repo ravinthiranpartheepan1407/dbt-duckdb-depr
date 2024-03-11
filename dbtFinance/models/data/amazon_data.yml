@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: amazon_data
+    description: "Staging Data"
+    loader: seed
+    tables:
+      - name: output
+        identifier: 'output.csv'
